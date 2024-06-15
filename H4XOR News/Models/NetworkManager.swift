@@ -1,8 +1,9 @@
 import Foundation
 
-class NetworkManager {
+class NetworkManager: ObservableObject {
+    
     var storyIDs = [Int]()
-    var stories = [Story]()
+    @Published var stories = [Story]()
     
     func fetchStories(completion: @escaping ([Story]) -> Void) {
         fetchData { [weak self] in
@@ -21,7 +22,9 @@ class NetworkManager {
                             if let safeData = data {
                                 do {
                                     let story = try decoder.decode(Story.self, from: safeData)
-                                    self.stories.append(story)
+                                    DispatchQueue.main.async {
+                                        self.stories.append(story)
+                                    }
                                 } catch {
                                     print(error)
                                 }
@@ -48,11 +51,13 @@ class NetworkManager {
                 if error == nil {
                     let decoder = JSONDecoder()
                     if let safeData = data {
-                        do {
-                            self.storyIDs = try decoder.decode([Int].self, from: safeData)
-                            completion()
-                        } catch {
-                            print(error)
+                        DispatchQueue.main.async {
+                            do {
+                                self.storyIDs = try decoder.decode([Int].self, from: safeData)
+                                completion()
+                            } catch {
+                                print(error)
+                            }
                         }
                     }
                 } else {

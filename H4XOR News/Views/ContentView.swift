@@ -1,19 +1,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    var stories = [Story]()
-    var networkManager = NetworkManager()
+    
+    @ObservedObject var networkManager = NetworkManager()
+    
     var body: some View {
         NavigationView {
-            List {
-                Text("hello, world")
+            List(networkManager.stories) { story in
+                NavigationLink(destination: DetailView(url: story.url)) {
+                    Text(story.title)
+                }
             }
             .navigationTitle("H4XOR News")
             
         }
         .onAppear {
             self.networkManager.fetchStories { stories in
-                print(stories)
+                print("results: \(stories.count)")
             }
         }
     }

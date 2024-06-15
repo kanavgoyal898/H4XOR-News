@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		410B53A22BB0B50300BFAFA9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B53A12BB0B50300BFAFA9 /* NetworkManager.swift */; };
 		410B53A42BB0BA8600BFAFA9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B53A32BB0BA8600BFAFA9 /* Story.swift */; };
+		4151F1FD2C1E3CE5008F8FA1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151F1FC2C1E3CE5008F8FA1 /* DetailView.swift */; };
+		4151F1FF2C1E414E008F8FA1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151F1FE2C1E414E008F8FA1 /* WebView.swift */; };
 		41D3ADF22BAE95CA000CAADB /* H4XOR_NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3ADF12BAE95CA000CAADB /* H4XOR_NewsApp.swift */; };
 		41D3ADF42BAE95CA000CAADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3ADF32BAE95CA000CAADB /* ContentView.swift */; };
 		41D3ADF62BAE95CB000CAADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D3ADF52BAE95CB000CAADB /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		410B53A12BB0B50300BFAFA9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		410B53A32BB0BA8600BFAFA9 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		4151F1FC2C1E3CE5008F8FA1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4151F1FE2C1E414E008F8FA1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		41D3ADEE2BAE95CA000CAADB /* H4XOR News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H4XOR News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D3ADF12BAE95CA000CAADB /* H4XOR_NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4XOR_NewsApp.swift; sourceTree = "<group>"; };
 		41D3ADF32BAE95CA000CAADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +49,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4151F1FB2C1E3CAA008F8FA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41D3ADF32BAE95CA000CAADB /* ContentView.swift */,
+				4151F1FC2C1E3CE5008F8FA1 /* DetailView.swift */,
+				4151F1FE2C1E414E008F8FA1 /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		41D3ADE52BAE95CA000CAADB = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +80,7 @@
 			children = (
 				410B53A02BB0B41300BFAFA9 /* Models */,
 				41D3ADF12BAE95CA000CAADB /* H4XOR_NewsApp.swift */,
-				41D3ADF32BAE95CA000CAADB /* ContentView.swift */,
+				4151F1FB2C1E3CAA008F8FA1 /* Views */,
 				41D3ADF52BAE95CB000CAADB /* Assets.xcassets */,
 				41D3ADF72BAE95CB000CAADB /* Preview Content */,
 			);
@@ -154,6 +168,8 @@
 				410B53A22BB0B50300BFAFA9 /* NetworkManager.swift in Sources */,
 				41D3ADF42BAE95CA000CAADB /* ContentView.swift in Sources */,
 				41D3ADF22BAE95CA000CAADB /* H4XOR_NewsApp.swift in Sources */,
+				4151F1FF2C1E414E008F8FA1 /* WebView.swift in Sources */,
+				4151F1FD2C1E3CE5008F8FA1 /* DetailView.swift in Sources */,
 				410B53A42BB0BA8600BFAFA9 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
