@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    var stories = [Story]()
     var networkManager = NetworkManager()
     var body: some View {
         NavigationView {
@@ -11,7 +12,9 @@ struct ContentView: View {
             
         }
         .onAppear {
-            self.networkManager.fetchData()
+            self.networkManager.fetchStories { stories in
+                print(stories)
+            }
         }
     }
 }
